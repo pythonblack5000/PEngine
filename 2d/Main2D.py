@@ -1,12 +1,11 @@
 import pygame
 pygame.init()
 debug = False
-def CreateScreen(xscreen,yscreen):
-    return pygame.display.set_mode([xscreen, yscreen])
+
 
 def FileLoad(File="", font_size=14):
     extension = File[-3:]
-    if(debug == True):
+    if(debug):
     	print("Extension: " + extension)
     if extension == "wav":
         pygame.mixer.init()
@@ -43,7 +42,7 @@ def Render(screenforrender, img, posx, posy):
     return screenforrender.blit(img, (posx, posy))
 
 
-def Background(screenforbg ,r, g, b):
+def ClearScreen(screenforbg ,r, g, b):
     return screenforbg.fill((r, g , b))
 
 def FPSLimit(fps):
@@ -58,7 +57,7 @@ def SoundPlay(soundfile_FLonly, volumef=1):
 
 
 def UpdateScreen():
-    pygame.display.update()
+    pygame.display.flip()
 
 def Quit():
     pygame.quit()
@@ -78,9 +77,10 @@ class Player:
         self.rect.y += (keys[pygame.K_s] - keys[pygame.K_w]) * self.speed
 
 class GameObject:
-    def __init__(self,imgfile,scalef,damage=0):
+    def __init__(self,imgfile,scalef,damagef=0):
         self.image = imgfile
         self.rect = self.image.get_rect()
         self.scale = scalef
         self.image = pygame.transform.scale(self.image, (self.scale, self.scale))
+        self.damage = damagef
 
