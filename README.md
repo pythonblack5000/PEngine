@@ -6,13 +6,15 @@ PEngine - это оболочка для pygame для чайников.
 ## 2D подмодуль
 ### Импорт подмодуля
 ```py
-import PEngine.2D as PE
+import PEngine.TwoD as PE
+import pygame #ну и он конечно
 #as PE - не обязателен
-#но он поможет не писать PEngine.2D.<функция>(аргументы)
+#но он поможет не писать PEngine.TwoD.<функция>(аргументы)
 ```
 ### После импорта напишите стандартный цикл pygame
 ```py
-import PEngine.2D as PE
+import PEngine.TwoD as PE
+import pygame #ну и он конечно
 
 screen = PE.CreateScreen(0,0,True) 
 #первые два аргумента это x,y 
@@ -30,7 +32,7 @@ PE.Quit() #выходим из игры
 ```
 ### Импорт ресурсов
 ```py
-import PEngine.2D as PE
+import PEngine.TwoD as PE
 
 PlayerImage = PE.FileLoad("//Player.png") #первый аргумент путь до файла
 NewTTF = PE.FileLoad("//newFont.ttf", 28) #второй размер шрифта
@@ -41,7 +43,8 @@ NewTTF = PE.FileLoad("//newFont.ttf", 28) #второй размер шрифт�
 ### Классы Player, GameObject и MapManager
 #### Player Class
 ```py
-import PEngine.2D as PE
+import PEngine.TwoD as PE
+import pygame #ну и он конечно
 
 screen = PE.CreateScreen(0,0,True) 
 #первые два аргумента это x,y 
@@ -68,7 +71,8 @@ PE.Quit() #выходим из игры
 ```
 #### GameObject Class
 ```py
-import PEngine.2D as PE
+import PEngine.TwoD as PE
+import pygame #ну и он конечно
 
 screen = PE.CreateScreen(0,0,True) 
 #первые два аргумента это x,y 
