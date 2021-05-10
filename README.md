@@ -40,7 +40,7 @@ NewTTF = PE.FileLoad("//newFont.ttf", 28) #второй размер шрифт�
 ```
 **Пока только расширения - wav, mp3, png, jpg, ttf**
 
-### Классы Player, GameObject и MapManager
+### Классы Player и GameObject
 #### Player Class
 ```py
 import PEngine.TwoD as PE
@@ -95,7 +95,4 @@ while running:
 
 PE.Quit() #выходим из игры
 ```
-#### MapManager Class
-```py
-#документация будет позже
-```
+
