@@ -20,10 +20,10 @@ def FileLoad(File="", font_size=14):
     if extension == "ttf":
         return pygame.font.Font(File, font_size)
 
-def CheckCollision(first_object, second_object, to_bool=True):
+def CheckCollision(first_object, second_object, return_bool=True):
 	first_rect = first_object.get_rect()
 	second_rect = second_object.get_rect()
-	if(to_bool == False):
+	if(!return_bool):
 		return first_rect.colliderect(second_rect)
 	else:
 		if(first_rect.colliderect(second_rect) == 1):
@@ -33,7 +33,7 @@ def CheckCollision(first_object, second_object, to_bool=True):
 
 
 def CreateScreen(xscreen,yscreen, fullscreenf = False):
-    if(fullscreenf == False):
+    if(!fullscreenf):
         return pygame.display.set_mode([xscreen, yscreen])
     else:
         return pygame.display.set_mode([xscreen, yscreen],pygame.FULLSCREEN)
