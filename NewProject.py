@@ -16,7 +16,8 @@ while running:
 PE.Quit()
 """
 if(len(sys.argv) < 2):
-	print("ERROR: Type a path for file!")	
+	print("ERROR: Type a path for file!")
+	print("USAGE: python3 NewProject.py [path to new file.py (example - C:/File/main.py)]")		
 	quit()
 else:
 	f = open(sys.argv[1], "w")
